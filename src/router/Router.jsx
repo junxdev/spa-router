@@ -12,6 +12,7 @@ export function Router({ children: routes }) {
     setCurrentPath(window.location.pathname);
   };
 
+  // TODO: handle the exception that any path is not matched with currentPath
   return routes.find((r) => r.props.path === currentPath).props.component;
 }
 
